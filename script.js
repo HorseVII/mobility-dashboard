@@ -5,7 +5,7 @@ function updateTime() {
     t.getHours().toString().padStart(2,'0') + ':' +
     t.getMinutes().toString().padStart(2,'0');
 }
-setInterval(updateTime, 2000);
+setInterval(updateTime, 1000);
 updateTime();
 
 // ----- Leaflet Map -----
@@ -29,15 +29,18 @@ spots.forEach(s => {
     radius: 20
   }).addTo(map);
 });
+
 // ----- Parking Occupancy Bar Chart -----
+// Labels 8am to 5pm
 var ctx = document.getElementById('busyness-chart').getContext('2d');
 var labels = [];
 for(let h=8; h<=17; h++){ labels.push(h + ':00'); }
 
+// Generate random occupancy between 40% and 100%
 function generateRandomData(){
   let data = [];
-  for(let i=0;i<labels.length;i++){
-    data.push(Math.floor(Math.random()*101));
+  for(let i=0; i<labels.length; i++){
+    data.push(Math.floor(Math.random() * 61) + 40); // 40-100%
   }
   return data;
 }
