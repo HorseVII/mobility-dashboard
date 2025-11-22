@@ -38,7 +38,7 @@ radius: 20
 });
 
 
-// ----- Busyness Bar Chart -----
+// ----- Parking Occupancy Bar Chart -----
 var ctx = document.getElementById('busyness-chart').getContext('2d');
 var labels = [];
 for(let h=8; h<=17; h++){ labels.push(h + ':00'); }
@@ -46,12 +46,12 @@ var data = [];
 for(let i=0;i<labels.length;i++){ data.push(Math.floor(Math.random()*101)); }
 
 
-var busynessChart = new Chart(ctx, {
+var occupancyChart = new Chart(ctx, {
 type: 'bar',
 data: {
 labels: labels,
 datasets: [{
-label: 'Campus Busyness (%)',
+label: '% Occupancy',
 data: data,
 backgroundColor: 'rgba(54, 162, 235, 0.6)',
 borderColor: 'rgba(54, 162, 235, 1)',
@@ -60,6 +60,19 @@ borderWidth: 1
 },
 options: {
 responsive:true,
-scales: { y: { beginAtZero:true, max:100 } }
+plugins: {
+legend: { display: true, position: 'top' },
+title: { display: false }
+},
+scales: {
+y: {
+beginAtZero:true,
+max:100,
+title: { display:true, text: '% Occupancy' }
+},
+x: {
+title: { display:true, text: 'Time of Day' }
+}
+}
 }
 });
