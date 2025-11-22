@@ -1,75 +1,67 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Mobility Dashboard Demo</title>
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<div class="container">
-  <h1>Mobility Dashboard Demo (Static Version)</h1>
+<section>
+<h2>Campus Busyness (8 AM – 5 PM)</h2>
+<canvas id="busyness-chart" style="max-width:100%; height:300px;"></canvas>
+</section>
 
-  <section class="heatmap">
-    <h2>Campus Heatmap – Fontys University Eindhoven</h2>
-    <div class="map">
-      <div class="spot red" style="top:10%; left:20%;"></div>
-      <div class="spot yellow" style="top:40%; left:60%;"></div>
-      <div class="spot green" style="top:60%; left:30%;"></div>
-      <div class="spot red" style="bottom:20%; right:20%;"></div>
-      <span class="note">Interactive Map Placeholder</span>
-    </div>
-  </section>
 
-  <section class="widgets">
-    <div class="widget">
-      <h3>Weather</h3>
-      <p class="big">12°C</p>
-      <p>Cloudy · Eindhoven</p>
-    </div>
-    <div class="widget">
-      <h3>Current Time</h3>
-      <p id="time" class="big">--:--</p>
-      <p>Local Time</p>
-    </div>
-    <div class="widget">
-      <h3>Next Bus</h3>
-      <p class="big">7 min</p>
-      <p>Line 5 → Fontys Rachelsmolen</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>Parking Prediction Modeling</h2>
-    <div class="pred-grid">
-      <div class="pbox"><h4>+1 hour</h4><p class="big">54%</p></div>
-      <div class="pbox"><h4>+2 hours</h4><p class="big">48%</p></div>
-      <div class="pbox"><h4>+3 hours</h4><p class="big">43%</p></div>
-      <div class="pbox"><h4>+4 hours</h4><p class="big">61%</p></div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Why This Prediction?</h2>
-    <ul>
-      <li>Historical demand curves</li>
-      <li>Exam week traffic increase</li>
-      <li>Weather influences car usage</li>
-      <li>Accident on ring road increases arrivals</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Traffic & Incident Correlation</h2>
-    <ul>
-      <li>Traffic speed near campus: 27 km/h</li>
-      <li>Incident: Minor crash at Eindhoven Ring</li>
-      <li>Impact: +12% more car arrivals</li>
-      <li>Peak shift: +20 minutes</li>
-    </ul>
-  </section>
+<!-- Existing Widgets Section -->
+<section class="widgets">
+<div class="widget">
+<h3>Weather</h3>
+<p class="big">12°C</p>
+<p>Cloudy · Eindhoven</p>
 </div>
+<div class="widget">
+<h3>Current Time</h3>
+<p id="time" class="big">--:--</p>
+<p>Local Time</p>
+</div>
+<div class="widget">
+<h3>Next Bus</h3>
+<p class="big">7 min</p>
+<p>Line 5 → Fontys Rachelsmolen</p>
+</div>
+</section>
 
+
+<!-- Parking Prediction Section -->
+<section>
+<h2>Parking Prediction Modeling</h2>
+<div class="pred-grid">
+<div class="pbox"><h4>+1 hour</h4><p class="big">54%</p></div>
+<div class="pbox"><h4>+2 hours</h4><p class="big">48%</p></div>
+<div class="pbox"><h4>+3 hours</h4><p class="big">43%</p></div>
+<div class="pbox"><h4>+4 hours</h4><p class="big">61%</p></div>
+</div>
+</section>
+
+
+<!-- Why This Prediction -->
+<section>
+<h2>Why This Prediction?</h2>
+<ul>
+<li>Historical demand curves</li>
+<li>Exam week traffic increase</li>
+<li>Weather influences car usage</li>
+<li>Accident on ring road increases arrivals</li>
+</ul>
+</section>
+
+
+<!-- Traffic & Incident Correlation -->
+<section>
+<h2>Traffic & Incident Correlation</h2>
+<ul>
+<li>Traffic speed near campus: 27 km/h</li>
+<li>Incident: Minor crash at Eindhoven Ring</li>
+<li>Impact: +12% more car arrivals</li>
+<li>Peak shift: +20 minutes</li>
+</ul>
+</section>
+
+
+</div>
 <script src="script.js"></script>
 </body>
 </html>
