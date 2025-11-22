@@ -16,10 +16,10 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // Map circles (purple-themed)
 var spots = [
-  {lat:51.451655, lng:5.480791, color:'#a569bd'},  
-  {lat:51.452479, lng:5.479168, color:'#8e44ad'},
-  {lat:51.451070, lng:5.482189, color:'#bb8fce'},
-  {lat:51.451769, lng:5.478253, color:'#d2b4de'}
+  {lat:51.451655, lng:5.480791, color:'#red'},  
+  {lat:51.452479, lng:5.479168, color:'#green'},
+  {lat:51.451070, lng:5.482189, color:'#yellow'},
+  {lat:51.451769, lng:5.478253, color:'#green'}
 ];
 
 spots.forEach(s => {
