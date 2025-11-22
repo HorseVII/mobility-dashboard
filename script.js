@@ -9,14 +9,13 @@ setInterval(updateTime, 2000);
 updateTime();
 
 // ----- Leaflet Map -----
-var map = L.map('campus-map').setView([51.4413, 5.4697], 16);
+var map = L.map('campus-map').setView([51.4518, 5.4800], 16); // center near your new spots
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-// Moved the first circle slightly north-east
 var spots = [
-  {lat:51.451655, lng:5.480791, color:'red'},  // moved
+  {lat:51.451655, lng:5.480791, color:'red'},
   {lat:51.452479, lng:5.479168, color:'green'},
   {lat:51.451070, lng:5.482189, color:'orange'},
   {lat:51.451769, lng:5.478253, color:'yellow'}
@@ -30,7 +29,6 @@ spots.forEach(s => {
     radius: 20
   }).addTo(map);
 });
-
 // ----- Parking Occupancy Bar Chart -----
 var ctx = document.getElementById('busyness-chart').getContext('2d');
 var labels = [];
