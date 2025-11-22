@@ -14,9 +14,9 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-// Moved the first circle slightly north and east
+// Moved the first circle slightly north-east
 var spots = [
-  {lat:51.4420, lng:5.4710, color:'red'},   // moved circle
+  {lat:51.4420, lng:5.4710, color:'red'},  // moved
   {lat:51.4410, lng:5.4685, color:'green'},
   {lat:51.4420, lng:5.4710, color:'orange'},
   {lat:51.4405, lng:5.4690, color:'yellow'}
