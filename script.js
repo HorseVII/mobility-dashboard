@@ -9,11 +9,12 @@ setInterval(updateTime, 1000);
 updateTime();
 
 // ----- Leaflet Map -----
-var map = L.map('campus-map').setView([51.4518, 5.4800], 16); // center near your new spots
+var map = L.map('campus-map').setView([51.4518, 5.4800], 16); // center near your spots
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
+// Circle spots on map
 var spots = [
   {lat:51.451655, lng:5.480791, color:'red'},
   {lat:51.452479, lng:5.479168, color:'green'},
