@@ -16,7 +16,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // Map circles (purple-themed)
 var spots = [
-  {lat:51.451655, lng:5.480791, color:'#a569bd'},  // purple
+  {lat:51.451655, lng:5.480791, color:'#a569bd'},  
   {lat:51.452479, lng:5.479168, color:'#8e44ad'},
   {lat:51.451070, lng:5.482189, color:'#bb8fce'},
   {lat:51.451769, lng:5.478253, color:'#d2b4de'}
@@ -73,7 +73,6 @@ setInterval(function(){
   occupancyChart.data.datasets[0].data = newData;
   occupancyChart.update();
 
-  // Update four prediction blocks
   document.getElementById('slot1').textContent = newData[0] + '%';
   document.getElementById('slot2').textContent = newData[2] + '%';
   document.getElementById('slot3').textContent = newData[4] + '%';
