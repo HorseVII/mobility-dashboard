@@ -5,7 +5,7 @@ function updateTime() {
     t.getHours().toString().padStart(2,'0') + ':' +
     t.getMinutes().toString().padStart(2,'0');
 }
-setInterval(updateTime, 1000);
+setInterval(updateTime, 2000);
 updateTime();
 
 // ----- Leaflet Map -----
@@ -16,10 +16,10 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // Moved the first circle slightly north-east
 var spots = [
-  {lat:51.4420, lng:5.4710, color:'red'},  // moved
-  {lat:51.4410, lng:5.4685, color:'green'},
-  {lat:51.4420, lng:5.4710, color:'orange'},
-  {lat:51.4405, lng:5.4690, color:'yellow'}
+  {lat:51.451655, lng:5.480791, color:'red'},  // moved
+  {lat:51.452479, lng:5.479168, color:'green'},
+  {lat:51.451070, lng:5.482189, color:'orange'},
+  {lat:51.451769, lng:5.478253, color:'yellow'}
 ];
 
 spots.forEach(s => {
