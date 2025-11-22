@@ -14,12 +14,12 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-// Map circles (purple-themed)
+// Map circles: keep red, green, yellow/orange
 var spots = [
-  {lat:51.451655, lng:5.480791, color:'#red'},  
-  {lat:51.452479, lng:5.479168, color:'#green'},
-  {lat:51.451070, lng:5.482189, color:'#yellow'},
-  {lat:51.451769, lng:5.478253, color:'#green'}
+  {lat:51.451655, lng:5.480791, color:'red'},
+  {lat:51.452479, lng:5.479168, color:'green'},
+  {lat:51.451070, lng:5.482189, color:'orange'},
+  {lat:51.451769, lng:5.478253, color:'yellow'}
 ];
 
 spots.forEach(s => {
@@ -36,7 +36,6 @@ var ctx = document.getElementById('busyness-chart').getContext('2d');
 var labels = [];
 for(let h=8; h<=17; h++){ labels.push(h + ':00'); }
 
-// Random occupancy 40%-100%
 function generateRandomData(){
   let data = [];
   for(let i=0; i<labels.length; i++){
