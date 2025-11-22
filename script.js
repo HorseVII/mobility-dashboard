@@ -69,6 +69,13 @@ var occupancyChart = new Chart(ctx, {
 
 // ----- Live Update Every 5 Seconds -----
 setInterval(function(){
-  occupancyChart.data.datasets[0].data = generateRandomData();
+  var newData = generateRandomData();
+  occupancyChart.data.datasets[0].data = newData;
   occupancyChart.update();
+
+  // Update the four parking time blocks dynamically
+  document.getElementById('slot1').textContent = newData[0] + '%';
+  document.getElementById('slot2').textContent = newData[2] + '%';
+  document.getElementById('slot3').textContent = newData[4] + '%';
+  document.getElementById('slot4').textContent = newData[7] + '%';
 }, 5000);
