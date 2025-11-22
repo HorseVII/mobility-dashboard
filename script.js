@@ -36,6 +36,7 @@ var ctx = document.getElementById('busyness-chart').getContext('2d');
 var labels = [];
 for(let h=8; h<=17; h++){ labels.push(h + ':00'); }
 
+// Random occupancy 40%-100%
 function generateRandomData(){
   let data = [];
   for(let i=0; i<labels.length; i++){
