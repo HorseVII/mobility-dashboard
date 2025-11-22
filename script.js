@@ -14,12 +14,12 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-// Map circles: keep red, green, yellow/orange
+// Map circles: classic busyness colors
 var spots = [
-  {lat:51.451655, lng:5.480791, color:'red'},
-  {lat:51.452479, lng:5.479168, color:'green'},
-  {lat:51.451070, lng:5.482189, color:'orange'},
-  {lat:51.451769, lng:5.478253, color:'yellow'}
+  {lat:51.451655, lng:5.480791, color:'red'},    // busy
+  {lat:51.452479, lng:5.479168, color:'green'},  // free
+  {lat:51.451070, lng:5.482189, color:'orange'}, // medium
+  {lat:51.451769, lng:5.478253, color:'yellow'}  // medium
 ];
 
 spots.forEach(s => {
